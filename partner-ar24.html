@@ -1,204 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AV25 × AR24 — Recommandé sécurisé</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
-  <link rel="stylesheet" href="css/partner.css" />
-</head>
-<body>
-  <!-- Animated background particles -->
-  <div class="particles-bg" aria-hidden="true">
-    <div class="particle p1"></div>
-    <div class="particle p2"></div>
-    <div class="particle p3"></div>
-    <div class="particle p4"></div>
-    <div class="particle p5"></div>
-  </div>
-
-  <main class="partner-shell">
-    <!-- Header -->
-    <header class="partner-header">
-      <div class="brand-block">
-        <div class="brand-logo">
-          <span class="brand-av25">AV25</span>
-          <i class="ph ph-link-simple brand-link-icon"></i>
-          <span class="ar24-badge">AR24</span>
-        </div>
-      </div>
-      <span class="secure-badge">
-        <i class="ph ph-shield-check"></i>
-        <span>Partenariat sécurisé</span>
-      </span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maquette Partenaire Office 365</title>
+    <link rel="stylesheet" href="css/office365-mockup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">Portail partenaire — Office 365 (maquette)</div>
+      <a class="btn btn-secondary" href="index.html">Accueil</a>
     </header>
 
-    <!-- Hero info card -->
-    <section class="partner-hero card glass-card">
-      <div class="hero-icon-wrap">
-        <div class="hero-icon-ring">
-          <i class="ph ph-envelope-simple hero-icon"></i>
-        </div>
-      </div>
-      <h1>Recommandé AR24 en attente</h1>
-      <p class="hero-subtitle">Un recommandé électronique vous a été envoyé via le partenariat <strong>AV25 × AR24</strong>.</p>
-      <div class="hero-features">
-        <div class="feature-chip">
-          <i class="ph ph-lock-key"></i>
-          <span>Sécurisé</span>
-        </div>
-        <div class="feature-chip">
-          <i class="ph ph-certificate"></i>
-          <span>Certifié</span>
-        </div>
-        <div class="feature-chip">
-          <i class="ph ph-clock-countdown"></i>
-          <span>Disponible</span>
-        </div>
-      </div>
-    </section>
+    <main class="main">
+      <section class="hero">
+        <h1>Entrée partenaire sécurisée</h1>
+        <p>
+          Gabarit destiné à vos parcours B2B: validation de domaine, routage des utilisateurs,
+          et redirection vers les applications Microsoft 365.
+        </p>
+      </section>
 
-    <!-- Verification card -->
-    <section class="partner-verify card glass-card">
-      <div class="verify-header">
-        <i class="ph ph-identification-card verify-header-icon"></i>
-        <div>
-          <h2>Vérification d'identité</h2>
-          <p class="verify-desc">Entrez votre adresse Gmail pour accéder à votre recommandé.</p>
+      <section class="hero form-wrap">
+        <h2>Vérifier un domaine partenaire</h2>
+        <label class="label" for="domain">Domaine entreprise</label>
+        <input class="input" id="domain" type="text" placeholder="ex: contoso.com" />
+        <div class="links">
+          <a class="btn btn-primary" href="verification.html">Vérifier</a>
+          <a class="btn btn-secondary" href="maquettes.html">Voir le plan</a>
         </div>
-      </div>
-
-      <form id="partner-form" autocomplete="off">
-        <div class="input-group">
-          <div class="input-icon-wrap">
-            <i class="ph ph-at input-icon"></i>
-          </div>
-          <input
-            type="email"
-            id="gmail"
-            name="gmail"
-            placeholder="votre.adresse@gmail.com"
-            required
-            autocomplete="email"
-          />
-          <div class="input-focus-ring"></div>
-        </div>
-        <button type="submit" id="verify-btn" class="btn-verify">
-          <i class="ph ph-magnifying-glass btn-icon"></i>
-          <span class="btn-text">Vérifier mon recommandé</span>
-          <div class="btn-loader hidden">
-            <div class="spinner"></div>
-          </div>
-        </button>
-      </form>
-
-      <!-- Verification steps animation -->
-      <div id="steps-container" class="steps-container hidden">
-        <div class="step-line"></div>
-        <div class="step" data-step="1">
-          <div class="step-circle">
-            <i class="ph ph-user-check step-icon-ph"></i>
-            <div class="step-spinner"></div>
-          </div>
-          <div class="step-content">
-            <span class="step-label">Vérification de l'identité</span>
-            <span class="step-status">En attente</span>
-          </div>
-        </div>
-        <div class="step" data-step="2">
-          <div class="step-circle">
-            <i class="ph ph-magnifying-glass step-icon-ph"></i>
-            <div class="step-spinner"></div>
-          </div>
-          <div class="step-content">
-            <span class="step-label">Recherche du recommandé</span>
-            <span class="step-status">En attente</span>
-          </div>
-        </div>
-        <div class="step" data-step="3">
-          <div class="step-circle">
-            <i class="ph ph-seal-check step-icon-ph"></i>
-            <div class="step-spinner"></div>
-          </div>
-          <div class="step-content">
-            <span class="step-label">Autorisation d'accès</span>
-            <span class="step-status">En attente</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Attempts indicator -->
-      <div id="attempts-indicator" class="attempts-indicator hidden">
-        <div class="attempts-dots"></div>
-        <span class="attempts-text"></span>
-      </div>
-
-      <!-- Status messages -->
-      <div id="status-area" class="status-area hidden">
-        <!-- Success state -->
-        <div id="success-state" class="result-card success-card hidden">
-          <div class="result-icon-wrap success-glow">
-            <i class="ph ph-check-circle result-icon"></i>
-          </div>
-          <h3>Votre recommandé AR24 a été trouvé !</h3>
-          <p>Cliquez sur le bouton ci-dessous pour y accéder en toute sécurité.</p>
-          <a id="open-btn" href="#" class="btn-open" target="_blank" rel="noopener">
-            <i class="ph ph-envelope-open"></i>
-            <span>Accéder à mon recommandé</span>
-            <i class="ph ph-arrow-right btn-arrow"></i>
-          </a>
-        </div>
-
-        <!-- Blocked state -->
-        <div id="blocked-state" class="result-card blocked-card hidden">
-          <div class="result-icon-wrap blocked-glow">
-            <i class="ph ph-prohibit result-icon"></i>
-          </div>
-          <h3>Accès refusé</h3>
-          <p>Pas de recommandé AR24 pour vous. Cette adresse email est bloquée.</p>
-          <button id="retry-btn" class="btn-retry" type="button">
-            <i class="ph ph-arrow-counter-clockwise"></i>
-            <span>Réessayer avec une autre adresse</span>
-          </button>
-        </div>
-
-        <!-- Not found state -->
-        <div id="notfound-state" class="result-card notfound-card hidden">
-          <div class="result-icon-wrap notfound-glow">
-            <i class="ph ph-question result-icon"></i>
-          </div>
-          <h3>Aucun recommandé trouvé</h3>
-          <p>Aucun recommandé n'a été trouvé pour cette adresse email.</p>
-          <button id="retry-btn-nf" class="btn-retry" type="button">
-            <i class="ph ph-arrow-counter-clockwise"></i>
-            <span>Réessayer</span>
-          </button>
-        </div>
-
-        <!-- Error state -->
-        <div id="error-state" class="result-card error-card hidden">
-          <div class="result-icon-wrap error-glow">
-            <i class="ph ph-warning-circle result-icon"></i>
-          </div>
-          <h3>Une erreur est survenue</h3>
-          <p id="error-message">Veuillez réessayer ultérieurement.</p>
-          <button id="retry-btn-err" class="btn-retry" type="button">
-            <i class="ph ph-arrow-counter-clockwise"></i>
-            <span>Réessayer</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="partner-footer">
-      <p><i class="ph ph-shield-checkered"></i> Vérification sécurisée — Données chiffrées de bout en bout</p>
-    </footer>
-  </main>
-
-  <script src="js/partner-ar24.js"></script>
-</body>
+      </section>
+    </main>
+  </body>
 </html>
