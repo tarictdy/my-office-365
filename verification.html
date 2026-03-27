@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -106,47 +106,15 @@
     </style>
       <link rel="stylesheet" href="css/auth-modern.css" />
   </head>
-  <body class="guest">
-    <header id="header">
-      <div class="wrapper">
-        <a href="#" class="header-logo">AR24 - Lettre Recommandée Électronique</a>
-      </div>
+  <body>
+    <header class="header">
+      <div class="brand">Vérification Microsoft 365 — Maquette</div>
+      <a class="btn btn-secondary" href="index.html">Accueil</a>
     </header>
-
-    <main id="main-content">
-      <div class="status-wrapper">
-        <section class="status-card" aria-live="polite">
-          <h1 class="loader-title">AR24</h1>
-          <p class="status-message">Connexion en cours...</p>
-          <p class="status-submessage">Vérification des informations sécurisées avant l'accès à votre espace.</p>
-          <div class="progress-dots" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </section>
-      </div>
+    <main class="main status">
+      <div class="status-icon">⏳</div>
+      <h1>Vérification en cours...</h1>
+      <p class="helper">Simulation de progression UX. Redirection automatique vers l’état succès.</p>
     </main>
-
-    <footer id="footer">
-      <div class="wrapper">
-        <div class="top">
-          <div class="logo">
-            <img alt="" src="/static/images/logo/AR24.svg" />
-          </div>
-          <div class="line">
-            <div>Votre solution d'envoi de recommandés électroniques fiable, pratique et efficace.</div>
-            <div>AR24 est une filiale de Docaposte</div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      window.setTimeout(() => {
-        window.location.href = 'refused.html';
-      }, 3500);
-    </script>
-    <script src="//code.tidio.co/7infjs1hu3tvvi6swicmo9klmhijsizg.js" async></script>
   </body>
 </html>
