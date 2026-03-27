@@ -3,8 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Maquette Office 365 - Accueil</title>
-    <link rel="stylesheet" href="css/office365-mockup.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Chargement - AR24</title>
+    <link
+      rel="stylesheet"
+      href="https://app.ar24.fr/static/min/?f=css/reset.css,css/design-system.css,fonts/font-barlow.css,fonts/font-montserrat.css&1771239617"
+    />
+    <link
+      href="https://app.ar24.fr/static/css/pages/user-login.css?v=1771239617"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .loader-wrapper {
+        min-height: calc(100vh - 260px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        color: #0000ff;
+      }
+
+      .loader-title.animate {
+        animation: ar24-color 1s ease-in-out infinite;
+      }
+
+      @keyframes ar24-color {
+        0% {
+          color: #0000ff;
+        }
+        50% {
+          color: #8f8f8f;
+        }
+        100% {
+          color: #0000ff;
+        }
+      }
+    </style>
+      <link rel="stylesheet" href="css/auth-modern.css" />
   </head>
   <body>
     <header class="header">
