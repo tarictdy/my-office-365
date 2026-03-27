@@ -1,84 +1,50 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <title>Chargement - AR24</title>
-    <link
-      rel="stylesheet"
-      href="https://app.ar24.fr/static/min/?f=css/reset.css,css/design-system.css,fonts/font-barlow.css,fonts/font-montserrat.css&1771239617"
-    />
-    <link
-      href="https://app.ar24.fr/static/css/pages/user-login.css?v=1771239617"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style>
-      .loader-wrapper {
-        min-height: calc(100vh - 260px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .loader-title {
-        font-family: 'Montserrat', sans-serif;
-        font-size: clamp(3rem, 8vw, 6rem);
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        color: #0000ff;
-      }
-
-      .loader-title.animate {
-        animation: ar24-color 1s ease-in-out infinite;
-      }
-
-      @keyframes ar24-color {
-        0% {
-          color: #0000ff;
-        }
-        50% {
-          color: #8f8f8f;
-        }
-        100% {
-          color: #0000ff;
-        }
-      }
-    </style>
+    <title>Maquette Office 365 - Accueil</title>
+    <link rel="stylesheet" href="css/office365-mockup.css" />
   </head>
-  <body class="guest">
-    <header id="header">
-      <div class="wrapper">
-        <a href="#" class="header-logo">AR24 - Lettre Recommandée Électronique</a>
-      </div>
+  <body>
+    <header class="header">
+      <div class="brand">Microsoft 365 Copilot — Maquette</div>
+      <div class="badge">Prototype UI (non officiel)</div>
     </header>
 
-    <main id="main-content">
-      <div class="loader-wrapper">
-        <h1 id="loaderText" class="loader-title animate">AR24</h1>
-      </div>
-    </main>
-
-    <footer id="footer">
-      <div class="wrapper">
-        <div class="top">
-          <div class="logo">
-            <img alt="" src="/static/images/logo/AR24.svg" />
-          </div>
-          <div class="line">
-            <div>Votre solution d'envoi de recommandés électroniques fiable, pratique et efficace.</div>
-            <div>AR24 est une filiale de Docaposte</div>
-          </div>
+    <main class="main">
+      <section class="hero">
+        <h1>Bienvenue sur votre maquette Office 365</h1>
+        <p>
+          Cette base organise vos écrans (accueil, connexion, inscription, états) avec un design cohérent
+          pour faciliter vos itérations UX.
+        </p>
+        <div class="links">
+          <a class="btn btn-primary" href="login.html">Écran Connexion</a>
+          <a class="btn btn-secondary" href="register.html">Écran Inscription</a>
+          <a class="btn btn-secondary" href="verification.html">État Vérification</a>
+          <a class="btn btn-secondary" href="authentified.html">État Succès</a>
+          <a class="btn btn-secondary" href="refused.html">État Refus</a>
+          <a class="btn btn-secondary" href="maquettes.html">Plan des maquettes</a>
         </div>
-      </div>
-    </footer>
+      </section>
 
-    <script>
-      setTimeout(() => {
-        window.location.href = 'register.html';
-      }, 3000);
-    </script>
-    <script src="//code.tidio.co/7infjs1hu3tvvi6swicmo9klmhijsizg.js" async></script>
+      <section class="grid">
+        <article class="card">
+          <h3>Recherche intelligente</h3>
+          <p>Structure proposée pour le module “Rechercher” avec zone d’action et CTA principal.</p>
+        </article>
+        <article class="card">
+          <h3>Conversation IA</h3>
+          <p>Bloc maquette pour scénarios Copilot (prompts, réponses, suivi des actions).</p>
+        </article>
+        <article class="card">
+          <h3>Collaboration</h3>
+          <p>Espace centralisé pour partager des documents et suivre les activités d’équipe.</p>
+        </article>
+      </section>
+
+      <p class="footer">Maquette de travail pour organisation UI/UX — Office 365 style.</p>
+    </main>
   </body>
 </html>
